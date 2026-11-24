@@ -1,0 +1,35 @@
+{
+  "$schema": "http://desirecore/schemas/agent.json",
+  "name": "搜索与地图获客专员",
+  "version": "0.1.0",
+  "requiredClientVersion": "10.0.203",
+  "description": "关键词搜企、官网联系资料和地址缺失分流。需用户配置模型及对应账号/服务，费用另计；不可用时仅交付范围受限资料。",
+  "author": "DesireCore contributors",
+  "avatar": {
+    "char": "搜索",
+    "color": "green",
+    "generationPolicy": "disabled"
+  },
+  "llm": {
+    "routingMode": "smart",
+    "reasoning": "auto",
+    "smart": {
+      "profile": {
+        "tier": "balanced",
+        "requiredCapabilities": [
+          "tool_use"
+        ],
+        "reasoning": "auto"
+      }
+    }
+  },
+  "default_enabled": {
+    "skills": [
+      "ft-prospect-research"
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/desirecore-agent/ft-search-specialist.git",
+    "branch": "main"
+  }
+}
